@@ -1,0 +1,27 @@
+site_name: 我的技术文档
+site_description: Mao123415 的 MkDocs 与 GitHub Pages 实践笔记
+site_url: https://mao123415.github.io/my-docs/
+repo_url: https://github.com/Mao123415/my-docs
+repo_name: Mao123415/my-docs
+
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: teal
+    accent: teal
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - 首页: index.md
+  - 关于: about.md
+  - 使用指南: guide.md
+  - API 参考: api.md
