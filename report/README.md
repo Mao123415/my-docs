@@ -3,8 +3,8 @@
 ## 1. 基本信息
 
 - GitHub 登录名：`Mao123415`
-- [个人公开仓库](https://github.com/Mao123415/my-docs)
-- [GitHub Pages 网站](https://mao123415.github.io/my-docs/)
+- 个人公开仓库：(https://github.com/Mao123415/my-docs)
+- 最终网站地址：(https://mao123415.github.io/my-docs/)
 - 实验环境：Windows PowerShell、Git、Python 3.12 和 MkDocs Material。
 
 ## 2. 实践过程与关键截图
