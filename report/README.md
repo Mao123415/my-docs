@@ -42,9 +42,9 @@
 
 ![首次运行中 build 与 deploy 均成功](images/05-first-deploy.png)
 
-### 2.6 检查公开网站和四页导航
+### 2.6 检查首次部署的网站和四页导航
 
-通过 [公开站点](https://mao123415.github.io/my-docs/) 核对首页、关于、使用指南和 API 参考。四页均返回 HTTP 200。首页保留了通往其他三页的链接，关于页有流程表格，使用指南和 API 参考分别展示命令与响应代码块。
+首次部署后，通过 [公开站点](https://mao123415.github.io/my-docs/) 核对首页、关于、使用指南和 API 参考。四页均返回 HTTP 200。首页提供了通往其他三页的链接，关于页展示了流程表格，使用指南和 API 参考分别展示了命令与响应代码块。
 
 ![首次发布后的 GitHub Pages 首页](images/06-public-site.png)
 
@@ -59,11 +59,29 @@
 
 ![公开首页出现第二次推送添加的提示](images/08-updated-site.png)
 
+### 2.8 当前版式与部署
+
+更新 `mkdocs.yml` 和 `docs/` 中的四页后，站点采用 Material 默认配色。桌面端左侧是全站导航，右侧是当前页目录。手机端可从页眉打开全站导航。
+
+- 首页提供阅读导航表，并显示“第二次推送验证”。
+- 关于页按项目目标、技术组成和实践笔记组织。
+- 使用指南列出常用命令和本地操作示例，并按阶段说明发布检查。
+- API 参考分别展示请求示例、响应示例和字段说明。
+
+严格构建通过。改版提交推送到 `main` 后自动触发部署，`build` 和 `deploy` 均成功。已在公开站点逐页验证桌面导航、页内目录、表格和代码块，并用手机尺寸验证菜单能跳转到 API 参考。
+
+- [版式更新的提交](https://github.com/Mao123415/my-docs/commit/fca13475a7d2f1e6c379388b69d1cf7aba33cfa8)
+- [当前版式的 Actions 运行](https://github.com/Mao123415/my-docs/actions/runs/43841098079)
+
+![当前首页的全站导航、页内目录与阅读导航表](images/09-current-homepage.png)
+
+![当前使用指南的常用命令、本地示例与发布检查表](images/10-current-guide.png)
+
 ## 3. 问题与解决
 
 首次直接运行 `git push` 时，Git 连接 `github.com:443` 超时，远端 `main` 仍指向初始化提交。检查发现系统配置了 HTTP 代理，Git 的直接连接未使用它。将现有代理仅传给当次 Git 命令后重试，推送成功，并在 Actions 中找到与该提交对应的运行。
 
-构建时主题输出了维护周期提示，严格构建成功退出。Actions 注释还提示，部分官方 Pages 操作原本面向 Node.js 20，本次由 runner 使用 Node.js 24 执行。核对了 `build` 中的 Python 设置、依赖安装、严格构建和制品上传，以及 `deploy` 的完成状态。两次运行都成功。
+构建时主题输出了维护周期提示，严格构建成功退出。Actions 注释还提示，部分官方 Pages 操作原本面向 Node.js 20，由 runner 使用 Node.js 24 执行。首次部署、第二次推送和版式更新对应的运行中，`build` 与 `deploy` 均成功。
 
 ## 4. 原理理解
 
