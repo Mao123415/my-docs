@@ -19,13 +19,13 @@
 
 在 `docs/` 中分别编写首页、关于、使用指南和 API 参考。首页的表格提供了页面入口，指南和 API 参考包含带语法高亮的示例。`mkdocs.yml` 的 `nav` 决定四页的名称和顺序，其中的文件路径以 `docs/` 为基准。`site/` 是构建时生成的目录，通过 `.gitignore` 排除。
 
-![GitHub 文件树和 mkdocs.yml](images/02-project-config.png)
+![当前项目的 GitHub 文件树和 mkdocs.yml](images/02-project-config.png)
 
 ### 2.3 本地严格构建与预览
 
 在 Python 3.12.16 虚拟环境中安装 `requirements.txt` 中的依赖，运行 `python -m mkdocs build --strict`，命令成功退出。通过 `python -m mkdocs serve` 在 `http://127.0.0.1:8000/my-docs/` 预览，首页、关于、指南和 API 参考的本地地址均返回 HTTP 200。
 
-![MkDocs Material 的本地预览](images/03-local-preview.png)
+![当前版式的 API 参考本地预览](images/03-local-preview.png)
 
 ### 2.4 设置 Pages 发布来源
 
@@ -42,11 +42,11 @@
 
 ![首次运行中 build 与 deploy 均成功](images/05-first-deploy.png)
 
-### 2.6 检查首次部署的网站和四页导航
+### 2.6 检查公开网站和四页导航
 
-首次部署后，通过 [公开站点](https://mao123415.github.io/my-docs/) 核对首页、关于、使用指南和 API 参考。四页均返回 HTTP 200。首页提供了通往其他三页的链接，关于页展示了流程表格，使用指南和 API 参考分别展示了命令与响应代码块。
+首次部署和版式更新后，均通过 [公开站点](https://mao123415.github.io/my-docs/) 核对了首页、关于、使用指南和 API 参考。四页均返回 HTTP 200。下图为当前关于页，左侧可跳转到其他页面，右侧可跳转到本页各节。
 
-![首次发布后的 GitHub Pages 首页](images/06-public-site.png)
+![当前 GitHub Pages 关于页及两侧导航](images/06-public-site.png)
 
 ### 2.7 第二次推送与自动更新
 
@@ -57,7 +57,7 @@
 
 ![第二次推送触发的成功运行](images/07-second-deploy.png)
 
-![公开首页出现第二次推送添加的提示](images/08-updated-site.png)
+当前首页也展示了这条提示，见[第 2.8 节的首页截图](#28-当前版式与部署)。
 
 ### 2.8 当前版式与部署
 
