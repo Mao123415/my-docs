@@ -5,11 +5,11 @@
 - GitHub 登录名：`Mao123415`
 - 个人公开仓库：https://github.com/Mao123415/my-docs
 - 最终网站地址：https://mao123415.github.io/my-docs/
-- 实验环境：Windows PowerShell、Git、Python 3.12 和 MkDocs Material。
+
 
 ## 2. 实践过程与关键截图
 
-### 2.1 创建公开仓库
+### 2.1 仓库创建
 
 在个人账号下创建公开仓库 `my-docs`，初始化 README，并克隆到本地。确认默认分支为 `main`，使源码分支与工作流中的触发分支一致。公开仓库便于从课程 Issue 直接访问源码和报告。
 
