@@ -2,14 +2,18 @@
 
 这个项目把静态文档的编写与发布放进同一个仓库。修改来源可以用 Git 提交追踪，Actions 的构建日志则记录对应版本如何生成并上线。
 
-## 发布流程
+## 项目目标
 
-| 阶段 | 读入 | 产出 |
-| --- | --- | --- |
-| 编写 | 文档需求 | `docs/` 中的 Markdown 和 `mkdocs.yml` 中的导航配置 |
-| 构建 | 仓库源码和 Python 依赖 | `site/` 中的 HTML、CSS 和 JavaScript |
-| 上传 | `site/` | Pages 工作流使用的构建制品 |
-| 部署 | 构建制品 | 可公开访问的 GitHub Pages 网站 |
+让推送到 `main` 的文档改动自动完成构建与发布，并通过 Actions 运行记录核对公开网站的版本。
+
+## 技术组成
+
+| 工具 | 在本项目中的作用 |
+| --- | --- |
+| Markdown | 在 `docs/` 中编写和维护页面正文 |
+| MkDocs Material | 读取 `mkdocs.yml`，将文档构建为 `site/` 中的 HTML、CSS 和 JavaScript |
+| GitHub Actions | 在文档改动推送后构建网站，上传并发布构建制品 |
+| GitHub Pages | 托管构建产物，提供可公开访问的网站地址 |
 
 ## 实践笔记
 
@@ -17,4 +21,7 @@
 
 排查问题时，先看 Actions 的哪个任务失败。构建失败时可以从依赖安装和 MkDocs 输出着手。构建成功但部署失败时，再检查 Pages 发布来源、部署权限和环境记录。
 
-[查看日常更新步骤](guide.md)
+## 相关阅读
+
+- [使用指南](guide.md)
+- [返回首页](index.md)

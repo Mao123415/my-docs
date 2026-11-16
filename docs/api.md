@@ -11,12 +11,14 @@
 | 成功状态 | `200 OK` |
 | 响应类型 | `application/json` |
 
-### 请求与响应
+### 请求示例
 
 ```http
 GET /api/docs HTTP/1.1
 Accept: application/json
 ```
+
+### 响应示例
 
 ```json
 {
@@ -27,6 +29,8 @@ Accept: application/json
 }
 ```
 
+## 响应字段说明
+
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
 | `items` | 数组 | 文档条目列表。没有结果时示例响应使用空数组。 |
@@ -34,4 +38,7 @@ Accept: application/json
 | `items[].title` | 字符串 | 导航中显示的标题 |
 | `items[].path` | 字符串 | 相对于站点根目录的页面路径 |
 
-[打开使用指南](guide.md) · [返回首页](index.md)
+## 相关阅读
+
+- [使用指南](guide.md)
+- [返回首页](index.md)

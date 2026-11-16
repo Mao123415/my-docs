@@ -7,11 +7,7 @@ repo_name: Mao123415/my-docs
 theme:
   name: material
   language: zh
-  palette:
-    primary: teal
-    accent: teal
   features:
-    - navigation.tabs
     - navigation.footer
     - content.code.copy
 
